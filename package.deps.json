@@ -1,0 +1,19 @@
+{
+    "peerDependencies": {
+        "next": ">=13.0.0",
+        "mongoose": ">=7.0.0"
+    },
+    "dependencies": {
+        "node-loader": "^2.0.0",
+        "null-loader": "^4.0.1"
+    },
+    "optionalDependencies": {
+        "kerberos": "^2.0.1",
+        "aws4": "^1.12.0",
+        "mongodb-client-encryption": "^2.9.0",
+        "saslprep": "^1.0.3",
+        "snappy": "^7.2.2",
+        "bson-ext": "^4.0.3",
+        "@mongodb-js/zstd": "^1.1.0"
+    }
+}

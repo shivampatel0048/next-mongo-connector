@@ -1,0 +1,118 @@
+{
+  "name": "next-mongo-connector",
+  "version": "1.0.0",
+  "description": "A modern, secure MongoDB connector for serverless Next.js apps — built with enterprise-grade security, smart caching, pooling, graceful shutdown handling, and full TypeScript support. Maximum security against hijacking and hacking attempts.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./empty-module": {
+      "types": "./dist/empty-module.d.ts",
+      "import": "./dist/empty-module.mjs",
+      "require": "./dist/empty-module.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "jest --verbose",
+    "test:integration": "jest --testPathPattern=integration.test.ts",
+    "test:security": "jest --testPathPattern=security.test.ts",
+    "test:all": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch --testPathPattern=connector.test.ts",
+    "prepublishOnly": "npm run build && npm run test",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "type-check": "tsc --noEmit",
+    "check": "npm run type-check && npm run test && npm run build",
+    "clean": "rm -rf dist coverage",
+    "pack:check": "npm pack --dry-run"
+  },
+  "peerDependencies": {
+    "mongoose": ">=7.0.0",
+    "next": ">=13.0.0"
+  },
+  "peerDependenciesMeta": {
+    "mongoose": {
+      "optional": false
+    },
+    "next": {
+      "optional": false
+    }
+  },
+  "optionalDependencies": {
+    "aws4": "^1.12.0",
+    "mongodb-client-encryption": "^6.0.0",
+    "kerberos": "^2.0.3",
+    "saslprep": "^1.0.3",
+    "snappy": "^7.2.2",
+    "bson-ext": "^4.0.3",
+    "@mongodb-js/zstd": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5.0.0",
+    "node-loader": "^2.0.0",
+    "null-loader": "^4.0.1"
+  },
+  "dependencies": {
+    "mongoose": "^8.15.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivampatel0048/next-mongo-connector.git"
+  },
+  "keywords": [
+    "nextjs",
+    "mongodb",
+    "mongoose",
+    "serverless",
+    "lambda",
+    "typescript",
+    "caching",
+    "connection",
+    "pooling",
+    "vercel",
+    "database",
+    "connector",
+    "security",
+    "secure",
+    "enterprise",
+    "ssl",
+    "tls",
+    "validation",
+    "whitelist",
+    "protection",
+    "hardened",
+    "anti-hijack",
+    "injection-prevention"
+  ],
+  "author": "Shivam Patel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shivampatel0048/next-mongo-connector/issues"
+  },
+  "homepage": "https://github.com/shivampatel0048/next-mongo-connector#readme"
+}
